@@ -1,0 +1,9 @@
+CREATE TABLE book_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER,  pages INTEGER, price INTEGER);
+
+INSERT INTO book_store VALUES (1, "The Hobbit", 3, 350, 25);
+INSERT INTO book_store VALUES (2, "The Silmarillion", 1, 850, 40);
+INSERT INTO book_store VALUES (3, "The Fellowship of the Ring", 2, 450, 35);
+INSERT INTO book_store VALUES (4, "The Two Towers", 1, 380, 32);
+INSERT INTO book_store VALUES (5, "The Return of the King", 3, 600, 38);
+
+SELECT name, (price*quantity) FROM book_store GROUP BY price;
