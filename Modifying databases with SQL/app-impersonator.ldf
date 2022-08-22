@@ -1,0 +1,27 @@
+CREATE TABLE lapRecord (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    driver TEXT,
+    course TEXT,
+    laprecord INTEGER);
+
+INSERT INTO lapRecord (driver, course, laprecord)
+    VALUES ("Mario", "Moo Moo Farm", 28);
+INSERT INTO lapRecord (driver, course, laprecord)
+    VALUES ("Toad", "Koopa Troopa Beach", 32);
+INSERT INTO lapRecord (driver, course, laprecord)
+    VALUES ("Luigi", "Shy Guy Falls", 36);
+INSERT INTO lapRecord (driver, course, laprecord)
+    VALUES ("Peach", "Choco Mountain", 38);
+INSERT INTO lapRecord (driver, course, laprecord)
+    VALUES ("Donkey Kong", "Rainbow Road", 42);
+
+
+SELECT * FROM lapRecord;
+
+UPDATE lapRecord SET laprecord = 30 WHERE id = 2;
+
+SELECT * FROM lapRecord;
+
+DELETE FROM lapRecord WHERE id = 4;
+
+SELECT * FROM lapRecord;
